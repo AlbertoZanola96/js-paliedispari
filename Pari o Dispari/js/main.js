@@ -8,11 +8,11 @@ console.log(numGiocatore);
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 
-function getRndInteger(min, max) {
+function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-var numPc = getRndInteger(1, 5);
+var numPc = random(1, 5);
 console.log(numPc);
 
 
@@ -22,6 +22,13 @@ var somma = numGiocatore + numPc;
 console.log("la somma dei numeri risulta: " + somma);
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-
-
 // Dichiariamo chi ha vinto.
+function pariDispari(num) {
+    if (num % 2 == 0) {
+        console.log("Vince Pari!");
+    } else {
+        console.log("Vince Dispari!");
+    }
+}
+
+var vincitore = pariDispari(somma);
